@@ -3,22 +3,131 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".SecondActivity2">
+
+    <!--Text view to show the welcome user's name-->
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/the_result_in_fahrenheit_is"
+        android:textColor="#FF5722"
+        android:textColorHighlight="#D6DF77"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCelTemp" />
 
     <TextView
         android:id="@+id/tvWelcome"
-        android:layout_width="296dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="100dp"
-        android:autoText="true"
+        android:layout_width="341dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="52dp"
         android:background="#A0D0E6"
         android:gravity="center_vertical|center_horizontal"
-        android:text="TextView"
+        android:text="@string/textview"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <!--text view, celsius to fahrenheit-->
+
+    <!--convert button, to switch to new activity, and show the result in fahrenheit-->
+
+    <TextView
+        android:id="@+id/tvchoose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="center"
+        android:text="@string/celsius_to_fahrenheit"
+        android:textColor="#8F1F1F"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcome"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!--text view, ask user to enter celsius temperature-->
+
+    <!--edit text, place to enter celsius temperature and send input data to third activity-->
+
+    <!--thermometer image-->
+
+    <Button
+        android:id="@+id/btconvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/convert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvcelius"
+        app:layout_constraintVertical_bias="0.652" />
+
+    <TextView
+        android:id="@+id/tvcelius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/please_enter_the_celsius_temperature"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvchoose" />
+
+    <EditText
+        android:id="@+id/etCelTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/celsius_temperature"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvchoose"
+        tools:ignore="LabelFor,SpeakableTextPresentCheck,TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/imageCelsius"
+        android:layout_width="295dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="90dp"
+        android:contentDescription="@string/celsius_temp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvfahrenheit"
+        app:srcCompat="@drawable/celsius" />
+
+    <TextView
+        android:id="@+id/tvfahrenheit"
+        android:layout_width="364dp"
+        android:layout_height="61dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btconvert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

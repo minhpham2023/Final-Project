@@ -10,12 +10,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Next button, to switch to second Activity and transfer user's name to new activity
         btnNext.setOnClickListener {
             val intent = Intent(this, SecondActivity2::class.java)
             intent.putExtra("Username", etUsername.text.toString())
             startActivity(intent)
         }
 
+        btMTK.setOnClickListener{
+            val intent = Intent(this, ThirdActivity3::class.java)
+            intent.putExtra("Username", etUsername.text.toString())
+            startActivity(intent)
+
+        }
 
 
 

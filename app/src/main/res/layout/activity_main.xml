@@ -6,19 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!--Textview, request users to enter their name -->
+
+    <!--EditText, place to enter user's name-->
+
+    <!--Button Next, To switch to new activity-->
+
+    <!--android logo image-->
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:text="Please enter your name"
+        android:text="@string/please_enter_your_name"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/etUsername"
+        app:layout_constraintBottom_toTopOf="@+id/btnNext"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.873" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
         android:id="@+id/etUsername"
@@ -26,27 +32,65 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="60dp"
         android:gravity="center"
-        android:hint="Username"
+        android:hint="@string/your_name"
         android:importantForAutofill="no"
         android:inputType="text"
         android:minHeight="48dp"
         android:textColorHint="#757575"
         app:layout_constraintBottom_toTopOf="@+id/btnNext"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.028" />
 
     <Button
         android:id="@+id/btnNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="212dp"
-        android:text="Next"
+        android:layout_marginTop="182dp"
+        android:text="@string/next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/android_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/adroid"
+        tools:ignore="ImageContrastCheck" />
+
+    <Button
+        android:id="@+id/btMTK"
+        android:layout_width="218dp"
+        android:layout_height="48dp"
+        android:text="@string/Mile_to_Kilometer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNext"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/please_choose_the_option_you_want"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btMTK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNext" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
