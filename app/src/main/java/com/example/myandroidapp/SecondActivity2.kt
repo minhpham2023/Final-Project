@@ -1,5 +1,6 @@
 package com.example.myandroidapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_second2.*
@@ -13,22 +14,30 @@ class SecondActivity2 : AppCompatActivity() {
         val wcuser = intent.getStringExtra("Username")
 
 
-        // show welcome user
+        // show welcome user's name
         tvWelcome.text = getString(R.string.welcome_messages,wcuser)
+
+        // if user does not enter name, just show "welcome user"
         if (wcuser =="")
         {
             tvWelcome.text=getString(R.string.welcome_user)
         }
 
 
-
+        // convert button, to convert celsius to fahrenheit when user click on it
         btconvert.setOnClickListener{
+            // call a function
             calculate()
         }
 
-
+        // button, back to main activity
+        btbtm.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
+    // function to calculate the result in fahrenheit with celsius input
     private fun calculate() {
         try {
             val celDouble = etCelTemp.text.toString().toDouble()
@@ -40,6 +49,7 @@ class SecondActivity2 : AppCompatActivity() {
             tvfahrenheit.text = getString(R.string.nonsense)
 
         }
+        // try - catch to check the data input, make sure the data input is number
 
 
 

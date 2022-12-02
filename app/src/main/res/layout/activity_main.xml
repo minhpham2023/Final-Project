@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!--Textview, request users to enter their name -->
 
-    <!--EditText, place to enter user's name-->
 
-    <!--Button Next, To switch to new activity-->
+
+
 
     <!--android logo image-->
 
+    <!--Textview, request users to enter their name -->
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -25,6 +25,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <!--EditText, place to enter user's name-->
 
     <EditText
         android:id="@+id/etUsername"
@@ -45,6 +47,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.028" />
 
+    <!--Button MTK, To switch to second activity, convert celsius to fahrenheit-->
     <Button
         android:id="@+id/btnNext"
         android:layout_width="wrap_content"
@@ -55,6 +58,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
+    <!--android image-->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
@@ -68,6 +72,7 @@
         app:srcCompat="@drawable/adroid"
         tools:ignore="ImageContrastCheck" />
 
+    <!--Button MTK, To switch to third activity, convert mile to kilometer-->
     <Button
         android:id="@+id/btMTK"
         android:layout_width="218dp"
